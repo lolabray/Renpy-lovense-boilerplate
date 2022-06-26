@@ -22,3 +22,8 @@ Copy only the new script.rpy into your project file
 Let me know if you end up using the boilerplate or code, I would love to compile a list of VNs for this README.
 
 If you need any help, get in touch!
+
+**Plans for Future Updates**
+
+ - [ ] Config options on settings menu
+ - [ ] Specific error handling
