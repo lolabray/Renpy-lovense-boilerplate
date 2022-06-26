@@ -37,6 +37,8 @@ label start:
 
 label set_up:
 
+# Start of Instructions for your user to hook up their toys
+
     l "Open your Lovense Remote app and go to Settings. Enable 'Game Mode' and get ready to enter your info! Ensure your phone is connected to the same network as the game."
 
     l "If you are using the PC Remote app, enable third parties control. Your config info is entered by default during setup. (IP= 127-0-0-1, SSLport= 30010)"
@@ -46,6 +48,7 @@ label set_up:
 
     l "Your config is [address], [SSLport]"
 
+# request for intial setup of toys
     python:
         url = "https://" + address + ".lovense.club:" + SSLport + "/command"
         try:
@@ -66,6 +69,7 @@ label story:
     
     l "Vibrations can be added as needed."
 
+# request for a pattern, use lovense documentation to customize
     python:
         try:
             response = requests.post(url, json={"command": "Pattern", "rule": "V:1;F:vrp;S:1000#", "strength": "20;15;20;15;20;10;20;20", "timeSec": 30,"apiVer": 1}, verify=False)
@@ -75,6 +79,8 @@ label story:
                 #To force the player to set up toys first and NOT continue with the story, remove the '#' on the next line
             #renpy.jump("set_up")
     
+    l "Your toy should be reacting!"
+
     l "This concludes the boilerplate. For help, reach out to the boilerplate developer {a=https://github.com/lolabray}Lola Bray{/a}"
 
 
