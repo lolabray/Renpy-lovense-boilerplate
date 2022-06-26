@@ -43,8 +43,9 @@ label set_up:
 
     l "If you are using the PC Remote app, enable third parties control. Your config info is entered by default during setup. (IP= 127-0-0-1, SSLport= 30010)"
     
-    $ address = renpy.input("What is your local IP listed in the Lovense Remote App (Game Mode)?", "127-0-0-1")
+    $ IPaddress = renpy.input("What is your local IP listed in the Lovense Remote App (Game Mode)?", "127-0-0-1")
     $ SSLport = renpy.input("What is your SSL port?", "30010")
+    $ address = IPaddress.replace('.', '-')
 
     l "Your config is [address], [SSLport]"
 
@@ -76,7 +77,7 @@ label story:
             print(response.json())
         except:
             renpy.notify("ERROR: Toys are NOT connected, please try again! Are you connected to the APP?")
-                #To force the player to set up toys first and NOT continue with the story, remove the '#' on the next line
+                #To force the player to set up toys first and NOT continue with the story, remove the '#' on the next line (This will restart the story, losing progress)
             #renpy.jump("set_up")
     
     l "Your toy should be reacting!"
