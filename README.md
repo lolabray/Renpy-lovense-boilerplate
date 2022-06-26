@@ -27,3 +27,4 @@ If you need any help, get in touch!
 
  - [ ] Config options on settings menu
  - [ ] Specific error handling
+ - [ ] Testing previous versions of Ren'Py 
