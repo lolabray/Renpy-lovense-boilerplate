@@ -23,6 +23,10 @@ Let me know if you end up using the boilerplate or code, I would love to compile
 
 If you need any help, get in touch!
 
+**References**
+[Lovense Standard API](https://www.lovense.com/sextoys/developer/doc#standard-api-title)
+[Requests Documentation](https://requests.readthedocs.io/en/latest/)
+
 **Plans for Future Updates**
 
  - [ ] Config options on settings menu
